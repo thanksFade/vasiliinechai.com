@@ -1,0 +1,15 @@
+# OS / tooling
+.DS_Store
+.agents/
+.claude/
+skills-lock.json
+
+# Private — do NOT publish (contains phone number)
+assets/Vasilii_Nechai.pdf
+
+# Scratch / working files (kept local, not deployed)
+logos.html
+logos2.html
+assets/hero-dark-b.png
+assets/hero-texture-a.png
+assets/hero-texture-b.png
