@@ -21,6 +21,7 @@
     </a>
     <nav>
       <a href="#about">About</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -58,6 +59,60 @@
       </p>
     </section>
 
+    <!-- WORK -->
+    <section class="block work" id="work">
+      <p class="section-label reveal">Selected work</p>
+
+      <header class="work-head reveal">
+        <h2>Arcavo</h2>
+        <p class="work-sub">Warehouse accounting for 3PL operators</p>
+        <p class="work-meta">2026 · Product, design &amp; build · Next.js, TypeScript, PostgreSQL</p>
+      </header>
+
+      <div class="work-intro">
+        <p class="reveal">
+          3PL operators — warehouses that hold other companies’ goods —
+          get paid by the pallet-day. Most small ones still run that on spreadsheets:
+          receipts on paper, monthly statements rebuilt by hand, statutory forms typed
+          from scratch. Arcavo replaces the whole loop with one system.
+        </p>
+        <p class="reveal">
+          I designed and built it end to end with AI tooling — product, data model,
+          security, infrastructure and deployment. It has been in production at a
+          cold-storage operator since June 2026.
+        </p>
+      </div>
+
+      <div class="work-scenes">
+        <figure class="work-scene">
+          <figcaption class="reveal"><span>01</span> Logging a movement</figcaption>
+          <arcavo-scene name="operation"></arcavo-scene>
+        </figure>
+        <figure class="work-scene">
+          <figcaption class="reveal"><span>02</span> Live warehouse occupancy</figcaption>
+          <arcavo-scene name="overview"></arcavo-scene>
+        </figure>
+        <figure class="work-scene">
+          <figcaption class="reveal"><span>03</span> Monthly statements and statutory forms</figcaption>
+          <arcavo-scene name="docs"></arcavo-scene>
+        </figure>
+        <figure class="work-scene">
+          <figcaption class="reveal"><span>04</span> What’s next</figcaption>
+          <arcavo-scene name="roadmap"></arcavo-scene>
+        </figure>
+      </div>
+
+      <div class="work-under reveal">
+        <h3>Under the hood</h3>
+        <ul>
+          <li>Stock is tracked by batch: every dispatch draws from a specific receipt, and the database itself refuses any change that would break the balance. A nightly reconciliation alerts on the slightest drift.</li>
+          <li>Multi-tenant: row-level security in the database isolates each organisation’s data, and the access rules are covered by automated tests.</li>
+          <li>A full audit trail of who changed what, readable by people rather than engineers.</li>
+          <li>Self-hosted on a VPS in Russia, with encrypted off-site backups and restores tested end to end.</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- EXPERIENCE -->
     <section class="block" id="experience">
       <p class="section-label reveal">Experience</p>
@@ -66,29 +121,40 @@
           <div class="entry-meta">Aug 2025 — Present</div>
           <div class="entry-body">
             <h3>Margo Consulting</h3>
-            <p class="entry-org">Front Office Technology Business Developer · London</p>
-            <p class="entry-desc">
-              Owned engagements end-to-end, from problem definition and stakeholder
-              discovery through to delivery, across FICC, equity derivatives and
-              systematic-trading technology.
-              Designed and built an internal intelligence platform — Python, with
-              multi-agent LLM workflows on the Claude API and MCP — automating
-              research and context across 250+ contacts and 28 institutions.
-            </p>
+            <p class="entry-org">Business Developer · London, UK</p>
+            <ul class="entry-points">
+              <li>Managed senior-stakeholder relationships with Director, MD, and COO-level contacts across technology and trading functions at tier-1 banks (BNP Paribas, HSBC, UBS, Morgan Stanley, Standard Chartered, Credit Agricole CIB).</li>
+              <li>Designed and built an internal intelligence platform (Python, Obsidian) tracking 1000+ contacts and 28 institutions. Integrated multi-agent LLM workflows (Claude API, MCPs) for market and prospection research across capital markets institutions.</li>
+              <li>Owned 5 full commercial cycle end-to-end – from opportunity through stakeholder engagement to delivery, across FICC, equity derivatives, and systematic trading technology.</li>
+              <li>Produced market intelligence on hiring trends and competitive dynamics across capital markets and systematic trading, translated into targeting decisions.</li>
+            </ul>
           </div>
         </li>
         <li class="entry reveal">
           <div class="entry-meta">Aug 2023 — Jan 2025</div>
           <div class="entry-body">
             <h3>Third Financial</h3>
-            <p class="entry-org">Project Delivery Consultant · London</p>
-            <p class="entry-desc">
-              Delivered 4+ full-cycle investment-platform implementations for
-              wealth, private-equity and capital-markets clients — owning
-              requirements, configuration, UAT and go-live. Led data and asset
-              migrations of £500M+ AUM and built automation tooling (JavaScript,
-              Postman) that cut implementation time by ~10%.
-            </p>
+            <p class="entry-org">Implementation Consultant · London, UK</p>
+            <ul class="entry-points">
+              <li>Delivered 4+ full-cycle investment platform implementations for wealth management, private equity and capital market clients, managing onboarding, migration, system configuration, and transition to BAU</li>
+              <li>Applied PRINCE2-aligned governance and Agile methods to manage project scope, plan milestones, track budgets.</li>
+              <li>Participated in fortnightly Jira board reviews to analyse and refine SLAs, specified and helped configure help desk workflow between end client and support teams</li>
+              <li>Led data and asset migrations (£500M+ AUM) across multi-currency portfolios, led structured UAT cycles and migration version control.</li>
+              <li>Partnered with Product team to improve the Morgan Lloyd journey (Figma) and ship new features across the Tercero Digital and Advisor Portal.</li>
+              <li>Built internal automation tools (JavaScript, Postman) that reduced average implementation time by 10% and decreased manual data reconciliation workload throughout the implementation cycles.</li>
+              <li>Managed REST API integrations with client portals and third-party vendors – technical requirements gathering, testing, and production releases – working closely with product managers.</li>
+              <li>Drove senior stakeholder communications, dependency mapping, and change control processes, consistently maintaining project integrity and stakeholder alignment. Facilitated 10+ client workshops and training, covering internal platform tooling.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry reveal">
+          <div class="entry-meta">May 2020 — Sep 2020</div>
+          <div class="entry-body">
+            <h3>CryptoCompany OÜ</h3>
+            <p class="entry-org">(Internship) Product Management · Tartu, Estonia</p>
+            <ul class="entry-points">
+              <li>Ran A/B testing to optimise payment-method selection across international markets, accounting for regional payment preferences.</li>
+            </ul>
           </div>
         </li>
       </ul>
@@ -115,5 +181,31 @@
   </footer>
 
   <script src="main.js"></script>
+  <!-- Arcavo scenes: loaded only when the visitor scrolls near the Work section -->
+  <script>
+    (function () {
+      var work = document.getElementById("work");
+      if (!work) return;
+      function load() {
+        if (document.getElementById("arcavo-scenes")) return;
+        var s = document.createElement("script");
+        s.id = "arcavo-scenes";
+        s.src = "arcavo/arcavo-scenes.js";
+        document.body.appendChild(s);
+      }
+      // already close (e.g. opened at #work) — load right away
+      if (work.getBoundingClientRect().top < window.innerHeight + 1200) return load();
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (e) {
+          if (e[0].isIntersecting) { load(); io.disconnect(); }
+        }, { rootMargin: "1200px 0px" });
+        io.observe(work);
+      }
+      // safety net: once the page is idle, fetch it anyway
+      window.addEventListener("load", function () {
+        (window.requestIdleCallback || setTimeout)(load, 3000);
+      });
+    })();
+  </script>
 </body>
 </html>

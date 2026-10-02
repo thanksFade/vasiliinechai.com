@@ -168,6 +168,76 @@ main { max-width: 70rem; margin: 0 auto; padding: 0 var(--pad); }
   letter-spacing: -0.01em;
 }
 
+/* ---- WORK ---- */
+.work-head h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.work-sub {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  color: var(--ink-soft);
+  margin-top: 0.8rem;
+}
+.work-meta {
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.work-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem clamp(2rem, 5vw, 4rem);
+  margin-top: 3rem;
+  max-width: 56rem;
+}
+.work-intro p { color: var(--ink); }
+.work-scenes { margin-top: clamp(4rem, 9vh, 7rem); display: grid; gap: clamp(5rem, 12vh, 9rem); }
+.work-scene figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: 2.2rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.01em;
+}
+.work-scene figcaption span {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+arcavo-scene { display: block; min-height: 220px; }
+.work-under { margin-top: clamp(5rem, 12vh, 9rem); max-width: 48rem; }
+.work-under h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.work-under ul { list-style: none; display: grid; gap: 1rem; }
+.work-under li { position: relative; padding-left: 1.4rem; color: var(--ink-soft); }
+.work-under li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.45rem;
+  height: 1px;
+  background: var(--ink-soft);
+}
+@media (max-width: 720px) {
+  .work-intro { grid-template-columns: 1fr; }
+}
+
 /* ---- EXPERIENCE ---- */
 .entries { list-style: none; }
 .entry {
@@ -192,6 +262,17 @@ main { max-width: 70rem; margin: 0 auto; padding: 0 var(--pad); }
 }
 .entry-org { color: var(--ink-soft); margin: 0.15rem 0 0.6rem; }
 .entry-desc { max-width: var(--measure); }
+.entry-points { list-style: none; display: grid; gap: 0.55rem; max-width: 44rem; }
+.entry-points li { position: relative; padding-left: 1.2rem; }
+.entry-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 0.45rem;
+  height: 1px;
+  background: var(--ink-soft);
+}
 
 /* ---- CONTACT ---- */
 .contact h2 {
